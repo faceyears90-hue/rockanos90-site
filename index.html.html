@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCK ANOS 90 - Portal Oficial do Rock dos Anos 90</title>
+    <title>PORTAL ROCK90S - O Portal Oficial do Rock dos Anos 90</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --vermelho-principal: #8B0000;
             --vermelho-escuro: #5A0000;
-            --vermelho-claro: #B22222;
             --cinza-escuro: #1A1A1A;
             --cinza-claro: #333;
             --cinza-texto: #E0E0E0;
@@ -18,616 +17,219 @@
             --fonte-titulo: 'Oswald', sans-serif;
             --fonte-texto: 'Roboto', sans-serif;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: var(--fonte-texto);
             background-color: var(--cinza-escuro);
             color: var(--cinza-texto);
             line-height: 1.6;
-            padding-bottom: 80px;
+            padding-bottom: 100px;
         }
-
-        /* HEADER E NAVEGAÇÃO */
         header {
             background: linear-gradient(to right, var(--vermelho-escuro), var(--vermelho-principal));
             padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            position: sticky; top: 0; z-index: 1000;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
             border-bottom: 3px solid var(--amarelo-destaque);
         }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
+        .logo-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
         .logo {
-            font-family: var(--fonte-titulo);
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: var(--fonte-titulo); font-size: 2.5rem; font-weight: 700; color: white;
+            text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-
-        .logo span {
-            color: var(--amarelo-destaque);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-            margin-top: 0.5rem;
-            flex-wrap: wrap;
-        }
-
+        .logo span { color: var(--amarelo-destaque); }
+        nav ul { display: flex; list-style: none; gap: 1.5rem; margin-top: 0.5rem; flex-wrap: wrap; }
         nav a {
-            color: white;
-            text-decoration: none;
-            font-family: var(--fonte-titulo);
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
+            color: white; text-decoration: none; font-family: var(--fonte-titulo); font-size: 1.2rem;
+            padding: 0.5rem 1rem; border-radius: 4px; transition: all 0.3s ease; text-transform: uppercase;
         }
-
-        nav a:hover, nav a.active {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: var(--amarelo-destaque);
-            transform: translateY(-2px);
-        }
-
-        /* CONTEÚDO PRINCIPAL */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
+        nav a:hover, nav a.active { background-color: rgba(255, 255, 255, 0.15); color: var(--amarelo-destaque); transform: translateY(-2px); }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; }
         .destaque-principal {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 3rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-            border-left: 6px solid var(--amarelo-destaque);
+            background-size: cover; background-position: center; padding: 3rem; border-radius: 8px;
+            margin-bottom: 2.5rem; border-left: 6px solid var(--amarelo-destaque);
         }
-
         .destaque-principal h1 {
-            font-family: var(--fonte-titulo);
-            font-size: 2.8rem;
-            color: white;
-            margin-bottom: 1rem;
+            font-family: var(--fonte-titulo); font-size: 2.8rem; color: white; margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
-
-        .destaque-principal p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin-bottom: 1.5rem;
-        }
-
+        .destaque-principal p { font-size: 1.2rem; max-width: 800px; margin-bottom: 1.5rem; }
         .btn-destaque {
-            display: inline-block;
-            background-color: var(--vermelho-principal);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-family: var(--fonte-titulo);
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            display: inline-block; background-color: var(--vermelho-principal); color: white;
+            padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 4px; font-family: var(--fonte-titulo);
+            font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;
             border: 2px solid transparent;
         }
-
         .btn-destaque:hover {
-            background-color: var(--vermelho-escuro);
-            border-color: var(--amarelo-destaque);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background-color: var(--vermelho-escuro); border-color: var(--amarelo-destaque);
+            transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
-
-        /* SEÇÃO DE CONTEÚDO */
         .secao-titulo {
-            font-family: var(--fonte-titulo);
-            font-size: 2rem;
-            color: white;
-            margin: 2.5rem 0 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--vermelho-principal);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            font-family: var(--fonte-titulo); font-size: 2rem; color: white; margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem; border-bottom: 2px solid var(--vermelho-principal);
+            display: flex; justify-content: space-between; align-items: center;
         }
-
-        .ver-todos {
-            color: var(--amarelo-destaque);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .ver-todos:hover {
-            text-decoration: underline;
-            transform: translateX(5px);
-        }
-
+        .ver-todos { color: var(--amarelo-destaque); text-decoration: none; font-size: 1rem; transition: all 0.3s ease; }
+        .ver-todos:hover { text-decoration: underline; transform: translateX(5px); }
         .grid-conteudo {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;
         }
-
         .card-conteudo {
-            background-color: var(--cinza-claro);
-            border-radius: 6px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            background-color: var(--cinza-claro); border-radius: 6px; overflow: hidden; transition: all 0.3s ease;
             border-top: 4px solid var(--vermelho-principal);
         }
-
-        .card-conteudo:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-        }
-
-        .card-imagem {
-            height: 180px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-corpo {
-            padding: 1.2rem;
-        }
-
+        .card-conteudo:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        .card-imagem { height: 180px; width: 100%; object-fit: cover; }
+        .card-corpo { padding: 1.2rem; }
         .card-categoria {
-            display: inline-block;
-            background-color: var(--vermelho-principal);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-            font-weight: bold;
+            display: inline-block; background-color: var(--vermelho-principal); color: white;
+            padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-bottom: 0.8rem;
+            text-transform: uppercase; font-weight: bold;
         }
-
         .card-titulo {
-            font-family: var(--fonte-titulo);
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: white;
-            line-height: 1.3;
+            font-family: var(--fonte-titulo); font-size: 1.4rem; margin-bottom: 0.8rem; color: white; line-height: 1.3;
         }
-
-        .card-descricao {
-            color: var(--cinza-texto);
-            margin-bottom: 1.2rem;
-            font-size: 0.95rem;
-        }
-
+        .card-descricao { color: var(--cinza-texto); margin-bottom: 1.2rem; font-size: 0.95rem; }
         .card-rodape {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);
         }
-
         .btn-card {
-            background-color: transparent;
-            color: var(--amarelo-destaque);
-            border: 1px solid var(--amarelo-destaque);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
+            background-color: transparent; color: var(--amarelo-destaque); border: 1px solid var(--amarelo-destaque);
+            padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.9rem; transition: all 0.3s ease;
         }
-
-        .btn-card:hover {
-            background-color: var(--amarelo-destaque);
-            color: var(--cinza-escuro);
-        }
-
-        /* RÁDIO STICKY */
+        .btn-card:hover { background-color: var(--amarelo-destaque); color: var(--cinza-escuro); }
         .radio-sticky {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(26, 26, 26, 0.95);
-            padding: 0.8rem 1.5rem;
-            border-top: 3px solid var(--vermelho-principal);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 999;
-            backdrop-filter: blur(5px);
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background-color: rgba(26, 26, 26, 0.95); padding: 0.8rem 1.5rem;
+            border-top: 3px solid var(--vermelho-principal); display: flex; align-items: center;
+            justify-content: space-between; z-index: 999; backdrop-filter: blur(5px);
         }
-
-        .radio-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .radio-tocando {
-            font-family: var(--fonte-titulo);
-            font-size: 1.1rem;
-            color: white;
-        }
-
-        .radio-tocando span {
-            color: var(--amarelo-destaque);
-            font-weight: bold;
-        }
-
-        .ouvintes {
-            font-size: 0.9rem;
-            color: var(--cinza-texto);
-        }
-
-        .ouvintes i {
-            color: var(--vermelho-claro);
-            margin-right: 0.3rem;
-        }
-
-        .radio-controles {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
+        .radio-info { display: flex; align-items: center; gap: 1rem; }
+        .radio-tocando { font-family: var(--fonte-titulo); font-size: 1.1rem; color: white; }
+        .radio-tocando span { color: var(--amarelo-destaque); font-weight: bold; }
+        .ouvintes { font-size: 0.9rem; color: var(--cinza-texto); }
+        .ouvintes i { color: var(--vermelho-claro); margin-right: 0.3rem; }
+        .radio-controles { display: flex; align-items: center; gap: 1rem; }
         .btn-radio {
-            background-color: var(--vermelho-principal);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: var(--vermelho-principal); color: white; border: none;
+            width: 40px; height: 40px; border-radius: 50%; cursor: pointer; transition: all 0.3s ease;
+            display: flex; align-items: center; justify-content: center;
         }
-
-        .btn-radio:hover {
-            background-color: var(--vermelho-claro);
-            transform: scale(1.1);
-        }
-
-        .volume-container {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .volume-container i {
-            color: var(--cinza-texto);
-        }
-
-        /* LOJA INTEGRADA */
+        .btn-radio:hover { background-color: var(--vermelho-claro); transform: scale(1.1); }
+        .volume-container { display: flex; align-items: center; gap: 0.5rem; }
+        .volume-container i { color: var(--cinza-texto); }
         .grid-produtos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem; margin-bottom: 3rem;
         }
-
         .card-produto {
-            background-color: var(--cinza-claro);
-            border-radius: 6px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            background-color: var(--cinza-claro); border-radius: 6px; overflow: hidden; transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.1);
         }
-
-        .card-produto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(139, 0, 0, 0.3);
-        }
-
-        .produto-imagem {
-            height: 200px;
-            width: 100%;
-            object-fit: contain;
-            background-color: #222;
-            padding: 1rem;
-        }
-
-        .produto-corpo {
-            padding: 1.2rem;
-        }
-
+        .card-produto:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(139, 0, 0, 0.3); }
+        .produto-imagem { height: 200px; width: 100%; object-fit: contain; background-color: #222; padding: 1rem; }
+        .produto-corpo { padding: 1.2rem; }
         .produto-titulo {
-            font-family: var(--fonte-titulo);
-            font-size: 1.2rem;
-            color: white;
-            margin-bottom: 0.5rem;
-            height: 3rem;
-            overflow: hidden;
+            font-family: var(--fonte-titulo); font-size: 1.2rem; color: white; margin-bottom: 0.5rem;
+            height: 3rem; overflow: hidden;
         }
-
-        .produto-preco {
-            font-size: 1.5rem;
-            color: var(--amarelo-destaque);
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
+        .produto-preco { font-size: 1.5rem; color: var(--amarelo-destaque); font-weight: bold; margin-bottom: 1rem; }
         .btn-comprar {
-            display: block;
-            width: 100%;
-            background-color: var(--vermelho-principal);
-            color: white;
-            text-align: center;
-            padding: 0.7rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-family: var(--fonte-titulo);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            display: block; width: 100%; background-color: var(--vermelho-principal); color: white;
+            text-align: center; padding: 0.7rem; border-radius: 4px; text-decoration: none;
+            font-family: var(--fonte-titulo); text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;
         }
-
-        .btn-comprar:hover {
-            background-color: var(--vermelho-escuro);
-            letter-spacing: 1.5px;
-        }
-
-        /* CONTEÚDO RELACIONADO */
+        .btn-comprar:hover { background-color: var(--vermelho-escuro); letter-spacing: 1.5px; }
         .conteudo-relacionado {
-            background-color: rgba(90, 0, 0, 0.2);
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin: 2rem 0;
+            background-color: rgba(90, 0, 0, 0.2); padding: 1.5rem; border-radius: 6px; margin: 2rem 0;
             border-left: 4px solid var(--amarelo-destaque);
         }
-
-        .conteudo-relacionado h3 {
-            font-family: var(--fonte-titulo);
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .relacionado-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
+        .conteudo-relacionado h3 { font-family: var(--fonte-titulo); color: white; margin-bottom: 1rem; font-size: 1.5rem; }
+        .relacionado-links { display: flex; flex-wrap: wrap; gap: 1rem; }
         .relacionado-links a {
-            color: var(--amarelo-destaque);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            background-color: rgba(139, 0, 0, 0.3);
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            color: var(--amarelo-destaque); text-decoration: none; padding: 0.5rem 1rem;
+            background-color: rgba(139, 0, 0, 0.3); border-radius: 4px; transition: all 0.3s ease;
         }
-
-        .relacionado-links a:hover {
-            background-color: var(--vermelho-principal);
-            transform: translateY(-3px);
-        }
-
-        /* COMPARTILHAMENTO */
+        .relacionado-links a:hover { background-color: var(--vermelho-principal); transform: translateY(-3px); }
         .compartilhamento {
-            display: flex;
-            gap: 1rem;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background-color: rgba(51, 51, 51, 0.5);
-            border-radius: 6px;
-            flex-wrap: wrap;
+            display: flex; gap: 1rem; margin: 2rem 0; padding: 1.5rem;
+            background-color: rgba(51, 51, 51, 0.5); border-radius: 6px; flex-wrap: wrap;
         }
-
-        .compartilhamento-titulo {
-            font-family: var(--fonte-titulo);
-            color: white;
-            margin-right: 1rem;
-        }
-
+        .compartilhamento-titulo { font-family: var(--fonte-titulo); color: white; margin-right: 1rem; }
         .btn-share {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;
         }
-
-        .btn-facebook { background-color: #3b5998; }
-        .btn-twitter { background-color: #1DA1F2; }
-        .btn-instagram { background-color: #E1306C; }
-        .btn-whatsapp { background-color: #25D366; }
+        .btn-facebook { background-color: #3b5998; } .btn-twitter { background-color: #1DA1F2; }
+        .btn-instagram { background-color: #E1306C; } .btn-whatsapp { background-color: #25D366; }
         .btn-link { background-color: var(--cinza-texto); color: var(--cinza-escuro); }
-
-        .btn-share:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-        }
-
-        /* FOOTER */
+        .btn-share:hover { transform: translateY(-5px); box-shadow: 0 5px 10px rgba(0,0,0,0.3); }
         footer {
-            background-color: var(--vermelho-escuro);
-            padding: 2rem;
-            text-align: center;
-            margin-top: 3rem;
+            background-color: var(--vermelho-escuro); padding: 2rem; text-align: center; margin-top: 3rem;
         }
-
-        .footer-logo {
-            font-family: var(--fonte-titulo);
-            font-size: 2rem;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
+        .footer-logo { font-family: var(--fonte-titulo); font-size: 2rem; color: white; margin-bottom: 1rem; }
         .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0;
         }
-
-        .footer-links a {
-            color: var(--cinza-texto);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--amarelo-destaque);
-            text-decoration: underline;
-        }
-
-        .newsletter {
-            max-width: 500px;
-            margin: 2rem auto;
-        }
-
-        .newsletter h3 {
-            font-family: var(--fonte-titulo);
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 0.5rem;
-        }
-
+        .footer-links a { color: var(--cinza-texto); text-decoration: none; transition: all 0.3s ease; }
+        .footer-links a:hover { color: var(--amarelo-destaque); text-decoration: underline; }
+        .newsletter { max-width: 500px; margin: 2rem auto; }
+        .newsletter h3 { font-family: var(--fonte-titulo); color: white; margin-bottom: 1rem; }
+        .newsletter-form { display: flex; gap: 0.5rem; }
         .newsletter-input {
-            flex-grow: 1;
-            padding: 0.8rem;
-            border-radius: 4px;
-            border: none;
-            background-color: rgba(255,255,255,0.1);
-            color: white;
+            flex-grow: 1; padding: 0.8rem; border-radius: 4px; border: none;
+            background-color: rgba(255,255,255,0.1); color: white;
         }
-
-        .newsletter-input::placeholder {
-            color: rgba(255,255,255,0.7);
-        }
-
+        .newsletter-input::placeholder { color: rgba(255,255,255,0.7); }
         .btn-newsletter {
-            background-color: var(--amarelo-destaque);
-            color: var(--cinza-escuro);
-            border: none;
-            padding: 0 1.5rem;
-            border-radius: 4px;
-            font-family: var(--fonte-titulo);
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            background-color: var(--amarelo-destaque); color: var(--cinza-escuro); border: none;
+            padding: 0 1.5rem; border-radius: 4px; font-family: var(--fonte-titulo);
+            text-transform: uppercase; cursor: pointer; transition: all 0.3s ease;
         }
-
-        .btn-newsletter:hover {
-            background-color: white;
-            transform: scale(1.05);
-        }
-
+        .btn-newsletter:hover { background-color: white; transform: scale(1.05); }
         .copyright {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
+            margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7); font-size: 0.9rem;
         }
-
-        /* RESPONSIVIDADE */
         @media (max-width: 768px) {
-            .logo-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-                justify-content: center;
-            }
-            
-            .destaque-principal h1 {
-                font-size: 2rem;
-            }
-            
-            .destaque-principal {
-                padding: 2rem;
-            }
-            
-            .radio-sticky {
-                flex-direction: column;
-                gap: 0.8rem;
-                padding: 0.8rem;
-            }
-            
-            .radio-info, .radio-controles {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .grid-conteudo, .grid-produtos {
-                grid-template-columns: 1fr;
-            }
-            
-            .newsletter-form {
-                flex-direction: column;
-            }
+            .logo-container { flex-direction: column; align-items: flex-start; }
+            nav ul { margin-top: 1rem; justify-content: center; }
+            .destaque-principal h1 { font-size: 2rem; } .destaque-principal { padding: 2rem; }
+            .radio-sticky { flex-direction: column; gap: 0.8rem; padding: 0.8rem; }
+            .radio-info, .radio-controles { width: 100%; justify-content: center; }
+            .grid-conteudo, .grid-produtos { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
     <header>
         <div class="logo-container">
-            <div class="logo">ROCK <span>ANOS 90</span></div>
+            <div class="logo">PORTAL <span>ROCK90S</span></div>
             <nav>
                 <ul>
-                    <li><a href="#inicio" class="active">Início</a></li>
-                    <li><a href="#noticias">Notícias</a></li>
-                    <li><a href="#shows">Shows</a></li>
-                    <li><a href="#radio">Rádio</a></li>
-                    <li><a href="#videos">Vídeos</a></li>
-                    <li><a href="#loja">Loja</a></li>
+                    <li><a href="#inicio" class="active">INÍCIO</a></li>
+                    <li><a href="#noticias">NOTÍCIAS</a></li>
+                    <li><a href="#shows">SHOWS</a></li>
+                    <li><a href="#festivais">FESTIVAIS</a></li>
+                    <li><a href="#radio">RÁDIO</a></li>
+                    <li><a href="#videos">VÍDEOS</a></li>
+                    <li><a href="#fotos">FOTOS</a></li>
+                    <li><a href="#loja">LOJA</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
-        <!-- DESTAQUE -->
         <section class="destaque-principal" id="inicio">
             <h1>PEARL JAM ANUNCIA 5 SHOWS NO BRASIL EM 2026</h1>
             <p>Turnê comemorativa de 35 anos do álbum "Ten" traz a banda para São Paulo, Rio, Curitiba, Porto Alegre e Belo Horizonte. Será a primeira vez que a banda toca no Brasil desde 2018. Prepare-se para ouvir clássicos como "Alive", "Even Flow" e "Jeremy" ao vivo.</p>
             <a href="#noticia-pearljam" class="btn-destaque">Matéria Completa</a>
         </section>
 
-        <!-- NOTÍCIAS -->
         <section id="noticias">
             <h2 class="secao-titulo">Últimas Notícias <a href="#todas-noticias" class="ver-todos">Ver Todas →</a></h2>
             <div class="grid-conteudo">
@@ -636,14 +238,13 @@
                     <div class="card-corpo">
                         <span class="card-categoria">Grunge</span>
                         <h3 class="card-titulo">NIRVANA: FILME COM CENAS RARAS EM 2026</h3>
-                        <p class="card-descricao">Documentário revela gravações nunca antes vistas das sessões de "Nevermind" e entrevistas exclusivas com Dave Grohl e Krist Novoselic.</p>
+                        <p class="card-descricao">Documentário revela gravações nunca antes vistas das sessões de "Nevermind". Inclui entrevistas exclusivas com Dave Grohl e Krist Novoselic.</p>
                         <div class="card-rodape">
                             <a href="#noticia-nirvana" class="btn-card">Ler Matéria</a>
                             <span class="ouvintes"><i class="fas fa-comment"></i> 243 comentários</span>
                         </div>
                     </div>
                 </article>
-
                 <article class="card-conteudo">
                     <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Metallica" class="card-imagem">
                     <div class="card-corpo">
@@ -656,7 +257,6 @@
                         </div>
                     </div>
                 </article>
-
                 <article class="card-conteudo">
                     <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soundgarden" class="card-imagem">
                     <div class="card-corpo">
@@ -672,24 +272,21 @@
             </div>
         </section>
 
-        <!-- CONTEÚDO RELACIONADO -->
         <section class="conteudo-relacionado">
             <h3>Continue sua imersão nos anos 90:</h3>
             <div class="relacionado-links">
-                <a href="#playlist-grunge">🎵 Playlist Grunge Essentials</a>
-                <a href="#fotos-raras">📸 Galeria de Fotos Raras</a>
+                <a href="#playlist-grunge">🎵 Playlist Nevermind Completa</a>
+                <a href="#fotos-raras">📸 Galeria de Fotos Raras do Nirvana</a>
                 <a href="#documentarios">🎬 Documentários Exclusivos</a>
-                <a href="#entrevistas">🎤 Entrevistas com as Bandas</a>
+                <a href="#loja">🛒 Loja de Produtos Oficiais</a>
             </div>
         </section>
 
-        <!-- LOJA INTEGRADA -->
         <section id="loja">
-            <h2 class="secao-titulo">Loja Oficial <span style="font-size: 1rem; color: var(--amarelo-destaque);"></span></h2>
+            <h2 class="secao-titulo">Loja Oficial <span style="font-size: 1rem; color: var(--amarelo-destaque);">(Produtos Afiliados)</span></h2>
             <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8);">Reviva a era de ouro do rock com estes produtos selecionados. Cada compra apoia o portal!</p>
             
             <div class="grid-produtos">
-                <!-- Produto 1 -->
                 <div class="card-produto">
                     <img src="https://m.media-amazon.com/images/I/71K1QfZqF3L._AC_SX679_.jpg" alt="Camiseta Nirvana" class="produto-imagem">
                     <div class="produto-corpo">
@@ -698,8 +295,6 @@
                         <a href="https://amzn.to/45cvFWA" target="_blank" class="btn-comprar">Comprar Agora</a>
                     </div>
                 </div>
-
-                <!-- Produto 2 -->
                 <div class="card-produto">
                     <img src="https://m.media-amazon.com/images/I/81QTZLuK1QL._AC_SX679_.jpg" alt="CD Nevermind" class="produto-imagem">
                     <div class="produto-corpo">
@@ -708,8 +303,6 @@
                         <a href="https://amzn.to/45kdbn3" target="_blank" class="btn-comprar">Comprar Agora</a>
                     </div>
                 </div>
-
-                <!-- Produto 3 -->
                 <div class="card-produto">
                     <img src="https://m.media-amazon.com/images/I/81TfQSo5OQL._AC_SX679_.jpg" alt="Vinil Pearl Jam Ten" class="produto-imagem">
                     <div class="produto-corpo">
@@ -718,8 +311,6 @@
                         <a href="https://amzn.to/4sJF01Y" target="_blank" class="btn-comprar">Comprar Agora</a>
                     </div>
                 </div>
-
-                <!-- Produto 4 -->
                 <div class="card-produto">
                     <img src="https://m.media-amazon.com/images/I/81QOk-1F3QL._AC_SX679_.jpg" alt="Vinil Metallica" class="produto-imagem">
                     <div class="produto-corpo">
@@ -730,23 +321,21 @@
                 </div>
             </div>
             
-            <!-- COMPARTILHAMENTO -->
             <div class="compartilhamento">
                 <div class="compartilhamento-titulo">Compartilhe esta página:</div>
-                <a href="#" class="btn-share btn-facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="btn-share btn-twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="btn-share btn-instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="btn-share btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="btn-share btn-link"><i class="fas fa-link"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=URL_DO_SITE" target="_blank" class="btn-share btn-facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?text=Confira o Portal Rock 90s!&url=URL_DO_SITE" target="_blank" class="btn-share btn-twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/?text=Confira o Portal Rock 90s! URL_DO_SITE" target="_blank" class="btn-share btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" onclick="alert('Link da página copiado para a área de transferência!'); return false;" class="btn-share btn-link"><i class="fas fa-link"></i></a>
             </div>
         </section>
     </div>
 
-    <!-- RÁDIO STICKY -->
+    <!-- PLAYER DE RÁDIO STICKY -->
     <div class="radio-sticky" id="radio">
         <div class="radio-info">
-            <div class="radio-tocando">Tocando agora: <span>Smells Like Teen Spirit - Nirvana</span></div>
-            <div class="ouvintes"><i class="fas fa-headphones"></i> 1.248 ouvintes online</div>
+            <div class="radio-tocando">Tocando agora: <span id="musica-atual">Smells Like Teen Spirit - Nirvana</span></div>
+            <div class="ouvintes"><i class="fas fa-headphones"></i> <span id="contador-ouvintes">1.248</span> ouvintes online</div>
         </div>
         <div class="radio-controles">
             <button class="btn-radio" id="btn-prev"><i class="fas fa-step-backward"></i></button>
@@ -759,9 +348,8 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer>
-        <div class="footer-logo">ROCK ANOS 90</div>
+        <div class="footer-logo">PORTAL ROCK90S</div>
         <div class="footer-links">
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
@@ -779,119 +367,109 @@
         </div>
         
         <div class="copyright">
-            <p>© 2026 ROCK ANOS 90. Todos os direitos reservados. | Redação Rock Anos 90</p>
+            <p>© 2026 PORTAL ROCK 90S. Todos os direitos reservados.</p>
+            <p>Todo o conteúdo é produzido pela <strong>Redação Rock Anos 90</strong>. Fontes externas são devidamente creditadas.</p>
+            <p>Este é um site de fãs. Não somos afiliados oficialmente às bandas ou artistas mencionados.</p>
             <p>Este site participa do Programa de Afiliados da Amazon. Ao clicar e comprar, podemos receber uma comissão.</p>
         </div>
     </footer>
 
     <script>
-        // CONTROLE DA RÁDIO
         document.addEventListener('DOMContentLoaded', function() {
-            const btnPlay = document.getElementById('btn-play');
-            const btnPrev = document.getElementById('btn-prev');
-            const btnNext = document.getElementById('btn-next');
-            const volumeControl = document.getElementById('volume');
-            const radioTocando = document.querySelector('.radio-tocando span');
-            
-            // Simulação de playlist
+            // ===== CONFIGURAÇÃO DA RÁDIO =====
             const playlist = [
                 { artista: "Nirvana", musica: "Smells Like Teen Spirit" },
-                { artista: "Pearl Jam", musica: "Alive" },
-                { artista: "Metallica", musica: "Enter Sandman" },
-                { artista: "Soundgarden", musica: "Black Hole Sun" },
-                { artista: "Alice in Chains", musica: "Man in the Box" },
-                { artista: "Red Hot Chili Peppers", musica: "Under the Bridge" },
-                { artista: "Guns N' Roses", musica: "November Rain" }
+                { artista: "Nirvana", musica: "In Bloom" },
+                { artista: "Nirvana", musica: "Come As You Are" },
+                { artista: "Nirvana", musica: "Breed" },
+                { artista: "Nirvana", musica: "Lithium" },
+                { artista: "Nirvana", musica: "Polly" },
+                { artista: "Nirvana", musica: "Territorial Pissings" },
+                { artista: "Nirvana", musica: "Drain You" },
+                { artista: "Nirvana", musica: "Lounge Act" },
+                { artista: "Nirvana", musica: "Stay Away" },
+                { artista: "Nirvana", musica: "On a Plain" },
+                { artista: "Nirvana", musica: "Something in the Way" }
             ];
             
             let currentTrack = 0;
             let isPlaying = false;
+            const btnPlay = document.getElementById('btn-play');
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+            const volumeControl = document.getElementById('volume');
+            const musicaAtualEl = document.getElementById('musica-atual');
+            const contadorOuvintesEl = document.getElementById('contador-ouvintes');
             
-            // Atualiza o display da música
             function updateTrackDisplay() {
-                radioTocando.textContent = `${playlist[currentTrack].musica} - ${playlist[currentTrack].artista}`;
+                musicaAtualEl.textContent = `${playlist[currentTrack].musica} - ${playlist[currentTrack].artista}`;
             }
             
-            // Controles da rádio
+            function simularOuvintes() {
+                let ouvintes = 1248;
+                setInterval(() => {
+                    ouvintes += Math.random() > 0.5 ? 1 : -1;
+                    if (ouvintes < 1200) ouvintes = 1200;
+                    contadorOuvintesEl.textContent = Math.floor(ouvintes);
+                }, 5000);
+            }
+            
             btnPlay.addEventListener('click', function() {
                 isPlaying = !isPlaying;
                 btnPlay.innerHTML = isPlaying ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
-                
-                if (isPlaying) {
-                    // Aqui você integraria com a API do Deezer/Spotify
-                    console.log(`Tocando: ${playlist[currentTrack].musica}`);
-                } else {
-                    console.log('Pausado');
-                }
+                console.log(isPlaying ? `Tocando: ${playlist[currentTrack].musica}` : 'Pausado');
             });
             
             btnPrev.addEventListener('click', function() {
                 currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
                 updateTrackDisplay();
-                if (isPlaying) {
-                    console.log(`Tocando anterior: ${playlist[currentTrack].musica}`);
-                }
+                console.log(`Música anterior: ${playlist[currentTrack].musica}`);
             });
             
             btnNext.addEventListener('click', function() {
                 currentTrack = (currentTrack + 1) % playlist.length;
                 updateTrackDisplay();
-                if (isPlaying) {
-                    console.log(`Tocando próxima: ${playlist[currentTrack].musica}`);
-                }
+                console.log(`Próxima música: ${playlist[currentTrack].musica}`);
             });
             
-            // Controle de volume
             volumeControl.addEventListener('input', function() {
                 console.log(`Volume ajustado para: ${this.value}%`);
             });
             
-            // Inicializa
             updateTrackDisplay();
+            simularOuvintes();
             
-            // SISTEMA DE COMENTÁRIOS SIMULADO
-            document.querySelectorAll('.btn-card').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const articleTitle = this.closest('.card-conteudo').querySelector('.card-titulo').textContent;
-                    alert(`Redirecionando para a matéria completa: "${articleTitle}".\n\nEm uma implementação real, aqui seria carregado o conteúdo completo com:\n- Texto expandido (800-1500 palavras)\n- Galeria de imagens\n- Seção de comentários ativa\n- Produtos relacionados\n- Player de vídeo integrado`);
-                });
-            });
-            
-            // COMPARTILHAMENTO
+            // ===== COMPARTILHAMENTO =====
+            const urlSite = window.location.href;
             document.querySelectorAll('.btn-share').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const platform = this.classList[1];
-                    const platformNames = {
-                        'btn-facebook': 'Facebook',
-                        'btn-twitter': 'X/Twitter',
-                        'btn-instagram': 'Instagram',
-                        'btn-whatsapp': 'WhatsApp',
-                        'btn-link': 'Link direto'
-                    };
-                    
-                    alert(`Compartilhando no ${platformNames[platform]}!\n\nEm uma implementação real, isso abriria o diálogo de compartilhamento da respectiva rede social.`);
-                });
-            });
-            
-            // NEWSLETTER
-            document.querySelector('.btn-newsletter').addEventListener('click', function() {
-                const email = document.querySelector('.newsletter-input').value;
-                if (email && email.includes('@')) {
-                    alert(`Obrigado por se inscrever! Em breve você receberá as melhores novidades do rock dos anos 90 no e-mail: ${email}`);
-                    document.querySelector('.newsletter-input').value = '';
-                } else {
-                    alert('Por favor, insira um e-mail válido.');
+                if(btn.classList.contains('btn-facebook')) {
+                    btn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlSite)}`;
+                } else if(btn.classList.contains('btn-twitter')) {
+                    btn.href = `https://twitter.com/intent/tweet?text=Confira o Portal Rock 90s!&url=${encodeURIComponent(urlSite)}`;
+                } else if(btn.classList.contains('btn-whatsapp')) {
+                    btn.href = `https://wa.me/?text=Confira o Portal Rock 90s! ${encodeURIComponent(urlSite)}`;
                 }
             });
             
-            // SCROLL SUAVE PARA LINKS INTERNOS
+            // ===== NEWSLETTER =====
+            document.querySelector('.btn-newsletter').addEventListener('click', function() {
+                const emailInput = document.querySelector('.newsletter-input');
+                const email = emailInput.value;
+                if (email && email.includes('@')) {
+                    alert(`Obrigado por se inscrever, fã dos anos 90! Você receberá as novidades em: ${email}`);
+                    emailInput.value = '';
+                } else {
+                    alert('Por favor, insira um e-mail válido para receber as novidades.');
+                }
+            });
+            
+            // ===== SCROLL SUAVE =====
             document.querySelectorAll('nav a, .ver-todos').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    if (this.getAttribute('href').startsWith('#')) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
                         e.preventDefault();
-                        const targetId = this.getAttribute('href');
+                        const targetId = href;
                         if (targetId !== '#') {
                             const targetElement = document.querySelector(targetId);
                             if (targetElement) {
@@ -905,15 +483,15 @@
                 });
             });
             
-            // EXIT-INTENT POPUP SIMULADO (quando o usuário tenta sair)
+            // ===== EXIT-INTENT POPUP =====
             document.addEventListener('mouseout', function(e) {
                 if (e.clientY < 0) {
-                    // Só mostra se não tiver visto recentemente (usando sessionStorage)
                     if (!sessionStorage.getItem('popupShown')) {
                         setTimeout(() => {
-                            if (confirm("Vai embora? A playlist 'Grunge Essentials' acaba de começar! Deseja continuar ouvindo?")) {
-                                // Usuário escolheu ficar
-                                btnPlay.click(); // Inicia a rádio
+                            if (confirm("Vai embora? A playlist completa do 'Nevermind' está tocando! Deseja continuar ouvindo?")) {
+                                if (!isPlaying) {
+                                    btnPlay.click();
+                                }
                                 sessionStorage.setItem('popupShown', 'true');
                             }
                         }, 500);
